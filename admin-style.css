@@ -1,0 +1,260 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Giriş Ekranı */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffba00;
+    border: none;
+    border-radius: 4px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #e0a800;
+}
+
+/* Admin Paneli */
+#adminContent {
+    padding: 20px;
+}
+
+#adminContent h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #e04343;
+}
+
+/* Form Stilleri */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+form h4 {
+    margin-bottom: 10px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Ürün Listesi */
+#productsList .product-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+#productsList .product-item img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+#productsList .product-item .product-info {
+    flex: 1;
+}
+
+#productsList .product-item .product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+#productsList .product-item button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#productsList .product-item button:hover {
+    background-color: #0069d9;
+}
+
+/* Silme Butonu */
+.delete-button {
+    background-color: #dc3545;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Modal Stili */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+/* Drop Area */
+#drop-area, #updateDropArea {
+    border: 2px dashed #ccc;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#drop-area:hover, #updateDropArea:hover {
+    border-color: #999;
+}
+
+#productFilter {
+    margin-bottom: 20px;
+}
+
+#productFilter select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* İlerleme Çubuğu */
+.progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    margin-top: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 20px;
+    background-color: #4caf50;
+    width: 0%;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
+
+/* Medya Sorguları */
+@media (max-width: 600px) {
+    .login-container, .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .logout-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    form button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #productsList .product-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #productsList .product-item .product-actions {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
